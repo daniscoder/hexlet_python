@@ -1,9 +1,9 @@
-# 02
+# Концепция списков
 # def is_list(value):
 #     return isinstance(value, list)
 
 
-# 03
+# Создание списков и добавление элементов
 # import math
 #
 #
@@ -16,9 +16,14 @@
 #     return [-square_root, square_root]
 
 
-# # 04
+# Ссылки
 # def get_range(n):
 #     return list(range(n))
 
 
-#05
+# Ссылки и изменяемость
+# def duplicate(items):
+#     items.extend(items)
+
+
+# Модификация списков поэлементно
