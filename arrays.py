@@ -51,10 +51,10 @@
 
 
 # 8. Цикл for
-def find_index(value, items):
-    for i, item in enumerate(items):
-        if value == item:
-            return i
+# def find_index(value, items):
+#     for i, item in enumerate(items):
+#         if value == item:
+#             return i
 #
 #
 # find_index('t', 'cat')  # 2
@@ -74,3 +74,41 @@ def find_index(value, items):
 #
 # print(find_second_index('b', 'bob'))
 # print(find_second_index('n', 'cannon'))
+
+
+# Испытания
+
+
+# 12. Копилка
+# from collections import Counter
+#
+#
+# def visualize(coins, bar_char='₽'):
+#     bar_char = bar_char * 2
+#     cnt = Counter(coins)
+#     max_coins = max(cnt.values())
+#     coins_arr = []
+#     visualize_coin = []
+#     for coin in sorted(cnt):
+#         coins_arr.append([bar_char] * cnt[coin] + [cnt[coin]] + [''] * (max_coins - cnt[coin]))
+#         visualize_coin.append('{:<2}'.format(coin))
+#     visualize_arr = []
+#     coins_count = len(coins_arr)
+#     for j in range(max_coins, -1, -1):
+#         visualize_line = []
+#         for i in range(coins_count):
+#             visualize_line.append('{:<2}'.format(coins_arr[i][j]))
+#         visualize_arr.append(' '.join(visualize_line))
+#     visualize_arr.append('-'.join(['--'] * coins_count))
+#     visualize_arr.append(' '.join(visualize_coin))
+#     return '\n'.join(visualize_arr)
+#
+#
+# print(visualize((10, 1, 1, 1, 1, 1, 20, 20, 20, 2, 2, 2, 2, 3, 3, 3, 3)))
+# MONEY = (
+#     1, 20, 2, 5, 20,
+#     3, 5, 2, 10, 2,
+#     20, 2, 20, 1, 2,
+#     1, 1, 2, 10, 20, 3,
+# )
+# print(visualize(MONEY))
