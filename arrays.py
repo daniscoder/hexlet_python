@@ -90,11 +90,11 @@
 #     coins_arr = []
 #     visualize_coin = []
 #     for coin in sorted(cnt):
-#         coins_arr.append([bar_char] * cnt[coin] + [cnt[coin]] + [''] * (max_coins - cnt[coin]))
+#         coins_arr.append([''] * (max_coins - cnt[coin]) + [cnt[coin]] + [bar_char] * cnt[coin])
 #         visualize_coin.append('{:<2}'.format(coin))
 #     visualize_arr = []
 #     coins_count = len(coins_arr)
-#     for j in range(max_coins, -1, -1):
+#     for j in range(max_coins + 1):
 #         visualize_line = []
 #         for i in range(coins_count):
 #             visualize_line.append('{:<2}'.format(coins_arr[i][j]))
@@ -112,3 +112,5 @@
 #     1, 1, 2, 10, 20, 3,
 # )
 # print(visualize(MONEY))
+
+
