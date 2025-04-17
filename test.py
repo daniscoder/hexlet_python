@@ -1,8 +1,21 @@
-def move_zeros(arr):
-    return [x for x in arr if x != 0] + [0] * arr.count(0)
+def cart_prod(*sets):
+    result = [()]
+    for current_set in sets:
+        temp = []
+        for partial_tuple in result:
+            for element in current_set:
+                new_tuple = partial_tuple + (element,)
+                temp.append(new_tuple)
+        result = temp
 
-#test
-print(move_zeros([1, 0, 1, 2, 0, 1, 3]))  # Output: [1, 1, 2, 1, 3, 0, 0]
-print(move_zeros([0, 0, 1, 2, 3]))        # Output: [1, 2, 3, 0, 0, 0]
-print(move_zeros([0, 0, 0, 1]))           # Output: [1, 0, 0, 0]
-print(move_zeros([1, 2, 3]))              # Output: [1, 2, 3]
+    return set(result)
+
+NULLSET = set()
+A = {1}
+B = {1, 2}
+C = {1, 2, 3}
+X = {'a'}
+Y = {'a', 'b'}
+Z = {'a', 'b', 'c'}
+
+print(cart_prod(A, B, C))
